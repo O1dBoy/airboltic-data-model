@@ -1,0 +1,8 @@
+spark_connection:
+  outputs:
+    dev:
+      method: session
+      schema: "{{ env_var('USER') }}_{{ env_var('ENV') }}"
+      type: spark
+      host: NA # Not used, but required by dbt-core
+  target: dev

@@ -1,0 +1,31 @@
+
+name: 'airboltic_data_model'
+version: '1.0.0'
+
+profile: 'spark_connection'
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - metastore_db
+  - spark-warehouse
+
+models:
+  airboltic_data_model:
+    landing:
+      +schema: landing
+    raw_data_vault:
+      +schema: raw_data_vault
+
+seeds:
+  airboltic_data_model:
+    abstraction_to_s3:
+      +schema: abstraction_to_s3
+
+vars:
+  execution_start_date: 19700101
+  execution_end_date: 21000101
