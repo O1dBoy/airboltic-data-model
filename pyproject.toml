@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "airboltic-data-model"
+package-mode = false
+version = "0.1.0"
+description = "A dbt repository to build  AirBoltic data model"
+authors = ["NHero"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dbt-core = "1.9.3"
+dbt-spark = { version = "1.9.1", extras = ["session"] }
+delta-spark = "3.3.0"
