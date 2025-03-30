@@ -27,7 +27,7 @@ We also to define a couple of environmental variables:
 export USER=<your_user>
 export ENV=<environment> 
 ```
-Where user is your user and environment is the target environment, dev or prod.
+Where user is your user (can be anything) and environment is the target environment, dev or prod.
 
 The project is based on dbt-spark connector with session method. This means that
 dbt will create and ad-hoc local spark session and warehouse (usually in dbt/spark-warehouse)

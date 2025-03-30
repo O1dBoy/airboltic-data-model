@@ -1,0 +1,25 @@
+version: 2
+
+models:
+    - name: metrics__monthly_report
+      description: '{{ doc("metrics__monthly_report") }}'
+      columns:
+        - name: trip_month
+          description: "The month of the trip end date."
+          tests:
+            - not_null
+            - unique
+        - name: orders_count
+          description: "The count of distinct orders in the month."
+        - name: total_revenue_eur
+          description: "The total revenue in EUR for the month."
+        - name: avg_spent_eur
+          description: "The average amount spent in EUR per order for the month."
+        - name: trips_count
+          description: "The count of distinct trips in the month."
+        - name: total_trips_duration_hours
+          description: "The total duration of all trips in hours for the month."
+        - name: avg_trip_duration_hours
+          description: "The average duration of a trip in hours for the month."
+        - name: active_customers
+          description: "The count of distinct active customers in the month."

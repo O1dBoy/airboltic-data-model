@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: hub__orders
+    description: '{{ doc("hub__orders") }}'
+    columns:
+      - name: hub__orders__key
+        description: "SHA1 hash of the order id"
+        data_tests:
+          - unique
+          - not_null
+      - name: hub__orders__nk
+        description: "Unique order id"
+      - name: _source
+        description: "Topic of the events sourcing the table"
+      - name: _load_datetime
+        description: "Timestamp when the record was loaded into the vault (UTC+0)"

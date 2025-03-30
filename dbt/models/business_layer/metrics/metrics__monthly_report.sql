@@ -11,7 +11,7 @@
 
 with metrics as (
     select
-        month(trip_end_date) as trip_month,
+        date(date_trunc('month', trip_end_date)) as trip_month,
         count(distinct order_id) as orders_count,
         sum(price_eur) as total_revenue_eur,
         avg(price_eur) as avg_spent_eur,

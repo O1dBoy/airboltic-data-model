@@ -20,6 +20,11 @@ models:
       +schema: landing
     raw_data_vault:
       +schema: raw_data_vault
+    business_layer:
+      intermediate:
+        +schema: intermediate
+      metrics:
+        +schema: metrics
 
 seeds:
   airboltic_data_model:
